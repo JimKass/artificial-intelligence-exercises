@@ -1,0 +1,17 @@
+environment = [[A,"Dirty"],[B,"Clean"]]
+
+function vacuum_agent_functions():
+     get current_position
+     if check_dirty?(current_position):
+        suck()
+     else if current_position = "A":
+        move(right)
+     else if current_position = "B":
+        move(left)
+
+class Agent:
+    function __init__(self, program=nil):
+        self.position = "A"
+        self.performace = 0
+
+vacuum_agent = Agent(vacuum_agent_functions)

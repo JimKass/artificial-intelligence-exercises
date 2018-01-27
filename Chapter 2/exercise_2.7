@@ -1,0 +1,26 @@
+function goal-based-agent(percept, action) returns an action
+    state = percept
+    model = how the next state depends on the currrent state
+    rules = [condition, rules]
+    goal = a description of the agent's goals
+
+    states = update_state(state, action, percept, model, goal)
+    state = update_state(state, action, percept, model)
+    rule = rule_match(state, rules, goals)
+    new_action = rule.action()
+    return new_action
+
+
+function utility-based-agent(percept) returns an action
+    state = percept
+    model = how the next state depends on the currrent state
+    rules = [condition, rules]
+    goal = a description of the agent's goals
+
+    states = update_state(state, action, percept, model, goal)
+    for state is states:
+        utiliy = check_happiness(state, action)
+    rule = rule_match(states, rules, goals)
+    new_action = rule.action()
+    return new_action
+
